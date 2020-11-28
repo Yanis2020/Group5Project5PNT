@@ -4,24 +4,21 @@ import com.base.TestBase;
 import com.data.DataProviders;
 import com.pages.HomePage;
 import com.pages.LoginPage;
-import com.pages.RegisterPage;
+import com.pages.FindFoodPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class HomePageValidations extends TestBase {
 
-    @Test(enabled = false)
+    @Test
     public void validateUserBeingAbleToTypeOnSearchBar() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.typeOnSearchBar("Java Books");
-    }
-
-    @Test(dataProviderClass = DataProviders.class, dataProvider = "searchData", enabled = false)
-    public void validateUserBeingAbleToSearchForAnItem(String data) {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.typeOnSearchBar(data);
+        homePage.closePopuButton();
+        homePage.typeOnSearchBar("Austin, TX, 78701");
         homePage.clickOnSearchButton();
     }
+
+
 
     @Test(enabled = false)
     public void validateUserBeingAbleToClickOnSignInButton() {
@@ -43,24 +40,9 @@ public class HomePageValidations extends TestBase {
     }
 
 
-    @Test(enabled = false)
-    public void validateUserCanRegister() {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        RegisterPage registerPage = PageFactory.initElements(driver, RegisterPage.class);
-
-        homePage.clickOnRegisterButton();
-        registerPage.validateURL();
-        registerPage.validateCreateAccountDisplayed();
-    }
 
 
-    @Test
-    public void fieldsValidationOnRegisterPage() {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        RegisterPage registerPage = PageFactory.initElements(driver, RegisterPage.class);
-        homePage.clickOnRegisterButton();
-        registerPage.validateFieldsUsingSoftAssert();
-    }
+
 
 
 }

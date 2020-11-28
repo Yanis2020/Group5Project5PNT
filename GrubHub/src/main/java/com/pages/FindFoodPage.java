@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-public class RegisterPage {
+public class FindFoodPage {
 
     @FindBy(xpath = "(//div[text()='Create an account'])[2]")
     private WebElement createAccontHeading;
