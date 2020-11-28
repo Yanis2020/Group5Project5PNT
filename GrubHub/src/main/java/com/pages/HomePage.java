@@ -11,7 +11,7 @@ public class HomePage {
     @FindBy(linkText = "Dismiss")
     private WebElement closePopup;
 
-    @FindBy(id = "addressInput-textInput")
+    @FindBy(id = "Search address")
     private WebElement searchBar;
 
     @FindBy(id = "start-order-search")
