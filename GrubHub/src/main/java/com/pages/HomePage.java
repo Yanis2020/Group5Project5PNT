@@ -8,17 +8,25 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage {
     private static Logger LOGGER = Logger.getLogger(HomePage.class);
 
-    @FindBy(id = "gh-ac")
+    @FindBy(linkText = "Dismiss")
+    private WebElement closePopup;
+
+    @FindBy(id = "addressInput-textInput")
     private WebElement searchBar;
 
-    @FindBy(id = "gh-btn")
+    @FindBy(id = "start-order-search")
     private WebElement searchBtn;
 
     @FindBy(linkText = "Sign in")
     private WebElement signInBtn;
 
-    @FindBy(linkText = "register")
-    private WebElement registerBtn;
+
+
+    public void closePopuButton() {
+        closePopup.click();
+        ExtentTestManager.log("Clicked on dismiss Button");
+
+    }
 
     public void typeOnSearchBar(String data) {
         searchBar.sendKeys(data);
@@ -28,7 +36,7 @@ public class HomePage {
 
     public void clickOnSearchButton() {
         searchBtn.click();
-        ExtentTestManager.log("Clicked on Search Button");
+        ExtentTestManager.log("Clicked on find food Button");
 
     }
 
@@ -37,9 +45,8 @@ public class HomePage {
         ExtentTestManager.log("Clicked on Sign In Button");
     }
 
-    public void clickOnRegisterButton() {
-        registerBtn.click();
-        ExtentTestManager.log("Clicked on Register Button");
-    }
+
+
+
 
 }
