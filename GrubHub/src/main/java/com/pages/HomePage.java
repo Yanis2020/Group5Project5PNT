@@ -11,16 +11,20 @@ public class HomePage {
     @FindBy(linkText = "Dismiss")
     private WebElement closePopup;
 
-    @FindBy(id = "Search address")
+    @FindBy(xpath = "//input[@aria-label='Search Address']")
     private WebElement searchBar;
 
-    @FindBy(id = "start-order-search")
+    @FindBy(xpath = "//button[@at-start-order-search-btn='true']")
     private WebElement searchBtn;
 
+    @FindBy(xpath = "//a[@title='Chick-fil-A']")
+    private WebElement addFood;
+
+/*
     @FindBy(linkText = "Sign in")
     private WebElement signInBtn;
 
-
+*/
 
     public void closePopuButton() {
         closePopup.click();
@@ -40,13 +44,17 @@ public class HomePage {
 
     }
 
+    public void addFoodButton() {
+        addFood.click();
+        ExtentTestManager.log("Clicked on add food Button");
+
+    }
+/*
     public void clickOnSignInButton() {
         signInBtn.click();
         ExtentTestManager.log("Clicked on Sign In Button");
     }
-
-
-
+*/
 
 
 }
