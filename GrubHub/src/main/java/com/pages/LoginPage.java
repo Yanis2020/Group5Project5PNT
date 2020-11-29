@@ -11,13 +11,14 @@ public class LoginPage {
     private WebElement emailField;
 
 
-    @FindBy(id = "signin-continue-btn")
+    @FindBy(xpath = "(//a[@href='/login'])[1]")
     private WebElement continueBtn;
 
     @FindBy(id = "pass")
     private WebElement passwordField;
 
     public void typeOnEmailField(String username) {
+
         emailField.sendKeys(username);
     }
 
@@ -28,6 +29,7 @@ public class LoginPage {
     }
 
     public void typeOnPasswordField(String password) {
+
         passwordField.sendKeys(password);
     }
 
