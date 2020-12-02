@@ -21,7 +21,6 @@ public class HomePage {
     private WebElement addFood;
 
 
-
     public void closePopuButton() {
         closePopup.click();
         ExtentTestManager.log("Clicked on dismiss Button");

@@ -22,18 +22,19 @@ public class LoginPage {
 
     @FindBy(linkText = "Dismiss")
     private WebElement closePopup2;
+    @FindBy(linkText = "Create your account")
+    private WebElement createAccount;
 
     public void typeOnEmailField(String username) {
 
         emailField.sendKeys(username);
     }
+
     public void closePopuButton2() {
         closePopup2.click();
         ExtentTestManager.log("Clicked on dismiss Button");
 
     }
-
-
 
     public void clickOnContinueButton() {
         continueBtn.click();
@@ -45,9 +46,22 @@ public class LoginPage {
 
         passwordField.sendKeys(password);
     }
+
+    /*   From here will be create account
+
+
+
+     */
+
     public void clickOnFinalSignInButton() {
         SignIn.click();
         ExtentTestManager.log("Clicked on the final sign in button");
+
+    }
+
+    public void clickOnCreateAccount() {
+        createAccount.click();
+        ExtentTestManager.log("Clicked on the create account button");
 
     }
 

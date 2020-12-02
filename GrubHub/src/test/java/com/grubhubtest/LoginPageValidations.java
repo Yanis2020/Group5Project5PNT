@@ -1,7 +1,6 @@
 package com.grubhubtest;
 
 import com.base.TestBase;
-import com.pages.HomePage;
 import com.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -17,7 +16,7 @@ public class LoginPageValidations extends TestBase {
 
         sleepFor(3);
 
-       loginPage.closePopuButton2();
+        loginPage.closePopuButton2();
         sleepFor(2);
         loginPage.clickOnContinueButton();
         sleepFor(2);
@@ -29,6 +28,18 @@ public class LoginPageValidations extends TestBase {
 
         loginPage.clickOnFinalSignInButton();
 
+
+    }
+
+    @Test
+    public void validateUserAbleToCreateAccount() {
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        sleepFor(3);
+        loginPage.closePopuButton2();
+        sleepFor(2);
+        loginPage.clickOnFinalSignInButton();
+        sleepFor(2);
+        loginPage.clickOnCreateAccount();
 
     }
 
