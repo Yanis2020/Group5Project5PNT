@@ -22,8 +22,7 @@ public class LoginPage {
 
     @FindBy(linkText = "Dismiss")
     private WebElement closePopup2;
-    @FindBy(linkText = "Create your account")
-    private WebElement createAccount;
+
 
     public void typeOnEmailField(String username) {
 
@@ -59,10 +58,6 @@ public class LoginPage {
 
     }
 
-    public void clickOnCreateAccount() {
-        createAccount.click();
-        ExtentTestManager.log("Clicked on the create account button");
 
-    }
 
 }
