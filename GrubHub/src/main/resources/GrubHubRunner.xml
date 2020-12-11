@@ -19,7 +19,7 @@
             <class name="com.grubhubtest.HomePageValidations"/>
             <class name="com.grubhubtest.LoginPageValidations"/>
             <class name="com.grubhubtest.CreateAccountValidations"/>
-
+            <class name="com.grubhubtest.AddFoodToCartValidations"/>
 
         </classes>
     </test>

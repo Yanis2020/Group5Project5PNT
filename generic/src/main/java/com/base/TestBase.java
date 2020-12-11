@@ -147,10 +147,12 @@ public class TestBase {
      * This method will navigate back from the current page to previous page
      */
     public static void navigateBack() {
+
         driver.navigate().back();
     }
 
     public static void clickOnElement(String element) {
+
         driver.findElement(By.xpath(element)).click();
     }
 
@@ -221,6 +223,7 @@ public class TestBase {
 
     @AfterSuite
     public void generateReport() {
+
         extent.close();
     }
     //reporting finish

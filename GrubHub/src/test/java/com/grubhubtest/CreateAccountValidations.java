@@ -2,28 +2,26 @@ package com.grubhubtest;
 
 import com.base.TestBase;
 import com.pages.CreateAccount;
-import com.pages.HomePage;
-import com.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class CreateAccountValidations extends TestBase {
 
 
-    @Test
+    @Test(enabled = false)
 
 
-    public static void userAbleToCreateAccount(){
+    public static void userAbleToCreateAccount() {
 
         CreateAccount createAccount = PageFactory.initElements(driver, CreateAccount.class);
-       // HomePage homePage= PageFactory.initElements(driver,CreateAccount.class);
+        // HomePage homePage= PageFactory.initElements(driver,CreateAccount.class);
         sleepFor(2);
 
         try {
-           createAccount.closePopuButton();
+            createAccount.closePopuButton();
         } catch (Exception e) {
-           e.printStackTrace();
-       }
+            e.printStackTrace();
+        }
         createAccount.clickOnContinueButton();
 
         sleepFor(2);

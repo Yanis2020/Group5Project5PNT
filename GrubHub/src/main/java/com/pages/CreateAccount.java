@@ -38,7 +38,6 @@ public class CreateAccount {
     private WebElement finalCreateAccount;
 
 
-
     public void closePopuButton() {
         closePopup.click();
         ExtentTestManager.log("Clicked on dismiss Button");
@@ -51,25 +50,26 @@ public class CreateAccount {
         ExtentTestManager.log("Clicked on continue button");
 
     }
+
     public void clickOnCreateAccount() {
         createAccount.click();
         ExtentTestManager.log("Clicked on the create account button");
 
     }
 
-    public  void typeOnFirstNameField (String firstname){
+    public void typeOnFirstNameField(String firstname) {
         firstNameField.sendKeys(firstname);
     }
 
-    public  void typeOnLastNameField (String lastname){
+    public void typeOnLastNameField(String lastname) {
         lastNameField.sendKeys(lastname);
     }
 
-    public  void typeOnEmailField (String email){
+    public void typeOnEmailField(String email) {
         emailField.sendKeys(email);
     }
 
-    public  void typeOnPasswordField (String password){
+    public void typeOnPasswordField(String password) {
         passwordField.sendKeys(password);
     }
 

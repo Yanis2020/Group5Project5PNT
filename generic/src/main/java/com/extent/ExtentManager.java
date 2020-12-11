@@ -17,7 +17,7 @@ public class ExtentManager {
             extent = new ExtentReports(System.getProperty("user.dir") + "/Report/AutomationReport.html", true);
             Reporter.log("Extent Report Directory" + resultDirectory, true);
             extent.addSystemInfo("Host Name", "PNT").addSystemInfo("Environment",
-                    "QA").addSystemInfo("User Name", "Automation").addSystemInfo("URL", "https://www.ebay.com");
+                    "QA").addSystemInfo("User Name", "Automation Group 5 ").addSystemInfo("URL", "https://www.grubhub.com");
             extent.loadConfig(new File("../generic/src/main/resources/com.report-config.xml"));
         }
         return extent;
